@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Deanery Document Automation</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>Generate Syllabus</h1>
+<form action="/api/syllabus/generate" method="post">
+    <label for="discipline">Discipline:</label>
+    <input type="text" id="discipline" name="discipline" required>
+    <label for="specialty">Specialty:</label>
+    <input type="text" id="specialty" name="specialty" required>
+    <button type="submit">Generate</button>
+</form>
+<script th:src="@{/js/app.js}"></script>
+</body>
+</html>
